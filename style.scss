@@ -1,0 +1,114 @@
+// lear
+// Frogger
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$lightColor: #f8f9fa;
+$darkColor: #23232f;
+$lightRed: #d20c22;
+$darkRed: #a20c12;
+$lightBlue: #3a95e4;
+$lightOrange: #f1b430;
+
+body {
+  min-height: 100vh;
+  background-color: $lightColor;
+  color: $darkColor;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  text-align: center;
+
+  .title {
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 2rem;
+
+    .score-text {
+      background-color: $lightBlue;
+      color: $lightColor;
+      width: 150px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+    }
+
+    .timer {
+      background-color: $lightOrange;
+      color: $lightColor;
+      width: 150px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    margin-top: 2rem;
+    justify-content: center;
+
+    .box {
+      outline: 1px solid;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  .switch-btn,
+  .restart-btn {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    background-color: $lightRed;
+    color: $lightColor;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $darkRed;
+    }
+  }
+
+  .restart-btn {
+    left: calc(100vw - 55px - 1rem);
+  }
+}
+
+.dark-body {
+  background-color: $darkColor;
+  color: $lightColor;
+}
